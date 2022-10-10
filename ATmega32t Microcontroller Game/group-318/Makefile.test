@@ -1,0 +1,44 @@
+# File:   Makefile
+# Author: Haider Saeed, Cara Kruger
+# Date:   14 Oct 2021
+# Descr:  Makefile for game
+
+CC = avr-gcc
+CFLAGS = -mmcu=atmega32u2 -Os -Wall -Wstrict-prototypes -Wextra -g -I. -I../../utils -I../../drivers -I../../drivers/test
+OBJCOPY = avr-objcopy
+SIZE = avr-size
+DEL = rm
+
+
+# Default target.
+all: game.out
+
+
+# Compile: create object files from C source files.
+game-test.o: game.c ../../drivers/test/system.h
+	$(CC) -c $(CFLAGS) $< -o $@
+
+mgetkey-test.o: ../../drivers/test/mgetkey.c ../../drivers/test/mgetkey.h
+	$(CC) -c $(CFLAGS) $< -o $@
+
+pio-test.o: ../../drivers/test/pio.c
+	$(CC) -c $(CFLAGS) $< -o $@
+
+system-test.o: ../../drivers/test/system.c ../../drivers/test/avrtest.h ../../drivers/test/mgetkey.h ../../drivers/test/pio.h ../../drivers/test/system.h
+	$(CC) -c $(CFLAGS) $< -o $@
+
+
+
+
+# Link: create executable file from object files.
+game: game-test.o mgetkey-test.o pio-test.o system-test.o
+	$(CC) $(CFLAGS) $^ -o $@ -lrt
+
+
+# Clean: delete derived files.
+.PHONY: clean
+clean: 
+	-$(DEL) game game-test.o mgetkey-test.o pio-test.o system-test.o
+
+
+

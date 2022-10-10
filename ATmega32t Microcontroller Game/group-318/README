@@ -1,0 +1,58 @@
+//# File:   README
+//# Author: Haider Saeed, Cara Kruger
+//# Date:   14 Oct 2021
+//# Descr:  Contains instructions to play the game. 
+
+
+
+---------------------------------- 𝐈𝐍𝐒𝐓𝐑𝐔𝐂𝐓𝐈𝐎𝐍𝐒 𝐅𝐎𝐑 𝐓𝐇𝐄 𝐆𝐀𝐌𝐄 -------------------------------------------
+                         
+                                   𝙶𝚊𝚖𝚎 𝙽𝚊𝚖𝚎:  Bomb Defusers
+                                    Authors: Haider & Cara
+
+
+
+Step 1: You will see a display on the screen after starting the game. This display 
+        specifies the game's name and gives credits to the authors. Push the navswitch
+        to progress.
+
+Step 2: The blue led turns off to indicate the start of the game. Before each game level,
+        the level number of the game is shown constantly. Push navswitch to start the 
+        game.
+
+Step 3: You will be shown a series of dots on the LED display. These dots are bombs placed
+        on a 5x7 grid. The order of the bombs is randomised. Please memorize the positions of
+        the bombs on the grid. Once you are sure of the bombs, push navswitch to progress.
+
+Step 4: All the leds would turn off except the one on the bottom most row. That is your players 
+        current position. Use the Navswitch to move the player on the grid to find the bombs.
+        Once you are sure of the bomb's position, push the navswitch to defuse the bomb.
+
+Step 5: If the bomb existed on that position, the blue led would blink 3 times. If you 
+        reselect the bomb position that has already been found, the blue led would blink once
+        to indicate that the bomb on that position has already been diffused. Once all the bombs 
+        in a level have been diffused, you can progress to the next level. There are a 
+        maximum of 10 levels.
+
+Step 6: If the bomb doesn't exist in the position the player chose, the player would loose and
+        the blue led would blink vigiourously. This is followed by a "GAME OVER" screen. Push
+        the navswitch to see your score. Once done, push navswitch again to stop the game.
+
+----------------------------------------------------------------------------------------------------------
+
+Useful Information: This type of game is often used during game-based assessments
+                    to help assist employer decisions during their recruitment processes.
+                    'Game-Based Assessments' refer to standalone games assessing a specific skill.
+                    Hence, your memory is tested in this game.
+
+                    
+                    
+
+
+
+
+
+
+
+
+
